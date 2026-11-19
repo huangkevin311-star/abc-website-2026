@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asian Business & Culture EDHEC</title>
+<meta name="description" content="EDHEC Asian Business & Culture (ABC), association étudiante à la croisée de la culture et du business en Asie. 10e génération, ABC Finance Consulting Case Competition 2026–2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&text=%E5%95%86%E5%8A%A1%E6%96%87%E5%8C%96&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="bar"></div>
+<header class="nav" id="nav">
+ <div class="wrap nav-in">
+  <a class="brand" href="#accueil" aria-label="Asian Business & Culture, accueil"><img src="assets/logo-abc.png" alt="Logo ABC">ABC</a>
+  <div class="nav-actions">
+   <button class="lang-switch" id="langSwitch" type="button" aria-label="Afficher le site en anglais"><span class="lang-current">FR</span><span aria-hidden="true">/</span><span class="lang-next">EN</span></button>
+   <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+  <nav class="links" id="links" aria-label="Navigation principale">
+   <a href="#accueil">Accueil</a><a href="#apropos">À propos</a><a href="#galerie">Galerie</a><a href="#activites">Activités</a><a href="#evenements">Concours finance</a><a href="#contact">Contact</a>
+  </nav>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+ <div class="hero-media" aria-hidden="true"><img src="assets/tigrou_mascotte.webp" alt="" fetchpriority="high" decoding="async"></div>
+ <div class="wrap hero-layout">
+  <div class="hero-copy">
+   <p class="eyebrow">EDHEC Business School · 10<sup>e</sup> génération</p>
+   <h1>Asian<br>Business<em>&amp; Culture</em></h1>
+   <p class="hero-kicker">Culture · Business · Rencontres</p>
+   <div class="hero-actions">
+    <a class="btn hero-primary" href="#evenements">Le concours finance</a>
+    <a class="btn hero-secondary" href="#contact">Nous contacter</a>
+   </div>
+  </div>
+ </div>
+ <a class="scroll-cue" href="#apropos"><span>Découvrir ABC</span><i></i></a>
+</section>
+
+<div class="ticker-wrap" aria-hidden="true"><div class="ticker" id="ticker"></div></div>
+
+<section class="sec light" id="apropos">
+ <div class="wrap about">
+  <div>
+   <p class="eyebrow">À propos</p>
+   <h2 class="big">Qui sommes-nous ?</h2>
+   <p><strong style="font-weight:500">EDHEC Asian Business &amp; Culture (ABC)</strong> est une association étudiante du campus de Lille de l’EDHEC Business School. Elle rassemble les étudiants autour d’un intérêt commun pour l’Asie, à la croisée de la culture et du business.</p>
+   <p>À travers nos événements, conférences et projets, nous faisons découvrir la diversité des cultures et traditions asiatiques tout en ouvrant des perspectives sur les enjeux économiques et les opportunités professionnelles en Asie.</p>
+   <p class="eyebrow" style="margin:34px 0 12px">Notre histoire</p>
+   <p style="font-size:18px">Créée en 2016, ABC célèbre cette année ses 10 ans. Depuis une décennie, dix générations d’étudiants se sont succédé, chacune apportant ses idées, ses projets et sa vision de l’association. Aujourd’hui, la 10<sup>e</sup> génération poursuit cette histoire et continue de faire évoluer ABC.</p>
+   <div class="stats"><div><b>2016</b><span>création</span></div><div><b>10</b><span>ans</span></div><div><b>10</b><span>générations</span></div></div>
+  </div>
+  <div class="about-photo"><img src="assets/membre_abc_dos.webp" alt="Les membres d’ABC vus de dos, portant les vestes de l’association" loading="lazy" decoding="async"></div>
+ </div>
+</section>
+
+<section class="band" aria-label="Citation">
+ <div class="wrap"><span class="eyebrow">ABC · 商务文化</span><q>À la croisée de la culture et du business.</q></div>
+</section>
+
+<section class="sec gallery-section" id="galerie">
+ <div class="wrap">
+  <p class="eyebrow">Galerie</p>
+  <h2 class="big">Galerie</h2>
+  <p class="sub">Les photographies des prochains temps forts d’ABC seront ajoutées ici.</p>
+  <div class="gal" id="gal">
+   <!-- Ajouter data-src="assets/nom-de-la-photo.webp" pour activer l’agrandissement. -->
+   <button class="tile t1" type="button" data-src="assets/photo_LNY_stand.webp" data-caption="Le stand ABC pendant la semaine du Lunar New Year" aria-label="Le stand ABC décoré pour le Lunar New Year"><img src="assets/photo_LNY_stand.webp" alt="Le stand ABC décoré pour le Lunar New Year" loading="lazy" decoding="async"><span class="cap"><small>Lunar New Year</small>ABC sur le campus</span></button>
+   <button class="tile t2" type="button" data-src="assets/photo_danseuses.webp" data-caption="Le Lunar New Year célébré sur le campus" aria-label="Membres d’ABC en tenues traditionnelles pendant le Lunar New Year"><img src="assets/photo_danseuses.webp" alt="Membres d’ABC en tenues traditionnelles pendant le Lunar New Year" loading="lazy" decoding="async"><span class="cap"><small>Lunar New Year</small>Traditions en couleurs</span></button>
+   <button class="tile t3" type="button" data-src="assets/conference-abviet.webp" data-caption="Une rencontre consacrée aux opportunités professionnelles au Vietnam et en Asie" aria-label="Intervenants de la conférence ABViet"><img src="assets/conference-abviet.webp" alt="Intervenants de la conférence ABViet" loading="lazy" decoding="async"><span class="cap"><small>Business</small>La rencontre ABViet</span></button>
+   <button class="tile t4" type="button" data-src="assets/photo_salle_des_perdu.webp" data-caption="Le campus décoré pour le Lunar New Year" aria-label="Décorations du Lunar New Year dans le campus de Lille"><img src="assets/photo_salle_des_perdu.webp" alt="Décorations du Lunar New Year dans le campus de Lille" loading="lazy" decoding="async"><span class="cap"><small>Campus</small>Le Nouvel An lunaire à l’EDHEC</span></button>
+   <button class="tile t5" type="button" data-src="assets/photo_octobre_rose.webp" data-caption="ABC réuni autour d’Octobre rose" aria-label="Les membres d’ABC réunis pour Octobre rose"><img src="assets/photo_octobre_rose.webp" alt="Les membres d’ABC réunis pour Octobre rose" loading="lazy" decoding="async"><span class="cap"><small>Engagement</small>ABC pour Octobre rose</span></button>
+   <button class="tile t6" type="button" data-src="assets/photo_devant_manoir.webp" data-caption="Les membres d’ABC devant le manoir du campus" aria-label="Les membres d’ABC devant le manoir du campus"><img src="assets/photo_devant_manoir.webp" alt="Les membres d’ABC devant le manoir du campus" loading="lazy" decoding="async"><span class="cap"><small>Équipe</small>Les couleurs d’ABC</span></button>
+  </div>
+ </div>
+</section>
+
+<section class="sec activities" id="activites">
+ <div class="wrap">
+  <p class="eyebrow">Ce que nous faisons</p>
+  <h2 class="big">Partager la culture, ouvrir des perspectives</h2>
+  <div class="activity-list">
+   <article class="activity reveal">
+    <div class="activity-photo"><img src="assets/photo_salle_des_perdu.webp" alt="Le campus de Lille décoré pour le Lunar New Year" loading="lazy" decoding="async"></div>
+    <div class="activity-copy">
+     <p class="activity-number">01 · Culture</p>
+     <h3>Lunar New Year sur le campus</h3>
+     <p>Chaque année, ABC célèbre le Nouvel An lunaire pendant une semaine sur le campus de Lille. Décorations, spécialités asiatiques, jeux traditionnels et activités collectives permettent à tous les étudiants de découvrir et de partager les cultures d’Asie.</p>
+     <ul class="activity-tags"><li>Une semaine sur le campus</li><li>Gastronomie asiatique</li><li>Jeux et traditions</li></ul>
+    </div>
+   </article>
+   <article class="activity reverse reveal">
+    <div class="activity-photo"><img src="assets/conference-abviet.webp" alt="Les intervenants de la conférence ABViet" loading="lazy" decoding="async"></div>
+    <div class="activity-copy">
+     <p class="activity-number">02 · Business</p>
+     <h3>Conférences et opportunités en Asie</h3>
+     <p>ABC organise des rencontres avec des professionnels et des organisations tournées vers l’Asie. Lors de notre précédente édition, le directeur d’ABViet, association vietnamienne basée à Paris, est intervenu à l’EDHEC pour présenter les opportunités de carrière au Vietnam et plus largement en Asie.</p>
+     <ul class="activity-tags"><li>Rencontre professionnelle</li><li>Carrières en Asie</li><li>Conférence à l’EDHEC</li></ul>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="sec comp" id="evenements">
+ <div class="wrap">
+  <p class="eyebrow">Concours finance · Nov 11, 2026</p>
+  <h2 class="big">ABC Finance Consulting Case Competition <em>2026–2027</em></h2>
+  <p class="tagline">Think like an Investment Banker or a Strategy Consultant. Perform financial analysis. Advise a global company. Defend your strategy in front of a jury.</p>
+  <p style="max-width:860px">The ABC Finance Business Case Competition is the first case competition organised by Asian Business &amp; Culture at EDHEC. It gives Bachelor students the chance to work on a real strategic question faced by a major Asian company, using the same tools as professionals in investment banking, private equity and consulting.</p>
+  <div class="facts"><span>1st &amp; 2nd year Bachelor</span><span>Teams of 3–5</span><span>EDHEC certificate</span><span>Final in Lille</span></div>
+  <div style="margin-top:36px"><a class="btn solid" href="https://forms.gle/NBf1yPQsdf7txBQq8">Register your team now</a></div>
+
+  <h3 class="h3big">Two key stages</h3>
+  <p class="sub">The competition comes down to two moments: a written valuation in Round 1, then a live defence in front of a jury.</p>
+  <div class="stages" role="tablist" aria-label="Two key stages">
+   <button class="stage-tab" role="tab" id="st1" aria-selected="true" aria-controls="sp" data-s="0"><span class="n">1</span><small>Stage 1 · Round 1</small><b>Build your valuation-backed recommendation</b><span class="d">Case released in November · submissions close in December 2026</span></button>
+   <button class="stage-tab" role="tab" id="st2" aria-selected="false" aria-controls="sp" data-s="1"><span class="n">2</span><small>Stage 2 · Live final</small><b>Defend your strategy in Lille</b><span class="d">Finalists announced 30 January · final 8–12 February 2027</span></button>
+  </div>
+  <div class="stage-panel" id="sp" role="tabpanel"></div>
+
+  <h3 class="h3big" style="margin-top:90px">Timeline</h3>
+  <div class="journey">
+   <div class="track" id="track">
+    <div class="line"></div><div class="fill" id="fill"></div>
+    <span class="seg s1"></span><span class="seg s2"></span>
+    <span class="seg-l" style="left:0">Stage 1</span><span class="seg-l" style="left:66.666%">Stage 2</span>
+    <span class="node" style="left:0"></span><div class="node-l" style="left:0"><b>November 2026</b>Team registration opens and the case is released</div>
+    <span class="node" style="left:33.333%"></span><div class="node-l" style="left:33.333%"><b>December 2026</b>Round 1 submissions close</div>
+    <span class="node" style="left:66.666%"></span><div class="node-l" style="left:66.666%"><b>30 January 2027</b>Finalist teams announced</div>
+    <span class="node" style="left:100%"></span><div class="node-l" style="left:100%"><b>8–12 February 2027</b>Live final in Lille and winners announced</div>
+    <div class="today" id="today"></div>
+   </div>
+   <div class="cd">
+    <div><p class="eyebrow" id="cdEye">Next milestone</p><h4 id="cdTitle"></h4></div>
+    <div class="cd-boxes" role="timer"><div class="cd-box"><b id="cd0">00</b><span>days</span></div><div class="cd-box"><b id="cd1">00</b><span>hours</span></div><div class="cd-box"><b id="cd2">00</b><span>min</span></div><div class="cd-box"><b id="cd3">00</b><span>sec</span></div></div>
+   </div>
+  </div>
+
+  <h3 class="h3big" style="margin-top:90px">The case</h3>
+  <div class="case">
+   <div class="l"><p class="eyebrow" style="color:var(--gold-hi)">This year's company</p><h4 style="margin-top:12px">PDD Holdings</h4><p>The Nasdaq-listed parent company of Temu, facing growing regulatory pressure in Europe.</p></div>
+   <div class="r"><h4>Adapt, retreat, or rethink?</h4><p>This year, teams advise PDD Holdings, the Nasdaq-listed parent company of Temu, on its response to growing regulatory pressure in Europe. Should it adapt, retreat, or rethink its model? Your team decides, and backs the recommendation with numbers.</p><div class="opts"><span>Adapt</span><span>Retreat</span><span>Rethink</span></div></div>
+  </div>
+
+  <h3 class="h3big" style="margin-top:90px">Who can take part</h3>
+  <p class="sub">The competition is open to 1st and 2nd year Bachelor students from EDHEC and from other universities in Europe and Asia, in teams of 3-5 people. No prior finance experience is required, only curiosity and the will to learn. Check where you stand.</p>
+  <div class="elig">
+   <div>
+    <fieldset class="field"><legend>Your year</legend><div class="opt" id="yr"><button type="button" aria-pressed="true" data-v="b12">Bachelor, 1st or 2nd year</button><button type="button" aria-pressed="false" data-v="b3">Bachelor, 3rd year or later</button><button type="button" aria-pressed="false" data-v="other">Master or other</button></div></fieldset>
+    <fieldset class="field"><legend>Your team</legend><div class="opt" id="tm"><button type="button" aria-pressed="false" data-v="1">Solo</button><button type="button" aria-pressed="false" data-v="2">2 people</button><button type="button" aria-pressed="true" data-v="4">3 to 5 people</button><button type="button" aria-pressed="false" data-v="6">6 or more</button></div></fieldset>
+   </div>
+   <div class="verdict" id="verdict" aria-live="polite"></div>
+  </div>
+
+  <h3 class="h3big" style="margin-top:90px">Why take part</h3>
+  <div class="why">
+   <div class="w"><i></i><h4>Prepare for the interviews that matter.</h4><p>Market sizing, valuation and strategy questions come up in almost every investment banking, private equity and consulting interview. Here, you practise them on a real company before recruiters ask.</p></div>
+   <div class="w"><i></i><h4>Learn the tools professionals use every day.</h4><p>Comparable companies, DCF, precedent transactions, operating models: you'll build them yourself, not just read about them in class.</p></div>
+   <div class="w"><i></i><h4>Gain experience you can actually talk about.</h4><p>“I valued PDD Holdings and recommended its European strategy to a jury” is a far stronger interview answer than “I'm interested in finance.”</p></div>
+   <div class="w"><i></i><h4>Get an EDHEC-certified certificate.</h4><p>Every participant receives an official certificate from EDHEC Business School. Add it to your CV and LinkedIn as proof that you've completed a real, professional-level finance case.</p></div>
+   <div class="w"><i></i><h4>Get noticed by experienced professionals.</h4><p>Present your work to a jury of academics and professionals, and get feedback that sharpens how you think and present.</p></div>
+   <div class="w"><i></i><h4>Build your network across two continents.</h4><p>Meet ambitious students from EDHEC and partner universities in Europe and Asia.</p></div>
+  </div>
+  <div class="reg"><a class="btn solid" href="https://forms.gle/NBf1yPQsdf7txBQq8">Register your team now</a>
+   <p class="q">Questions? Contact us at <a href="mailto:abc@edhec.com">abc@edhec.com</a> or follow us on Instagram <a href="https://www.instagram.com/edhec.abc">@edhec.abc</a>.</p></div>
+ </div>
+</section>
+
+<section class="sec light" id="partenaires" style="padding:110px 0">
+ <div class="wrap partner">
+  <p class="eyebrow">Partenariats</p>
+  <h2 class="big">Devenez partenaire d’ABC</h2>
+  <p class="pp">Entreprises françaises ou asiatiques : associez votre nom à une association qui fait le lien entre l’Asie et la communauté EDHEC, et rencontrez les étudiants qui s’y intéressent.</p>
+  <a class="btn dark" href="#contact">Nous écrire</a>
+ </div>
+</section>
+
+<section class="sec contact-section" id="contact">
+ <div class="wrap contact">
+  <div class="contact-intro">
+   <p class="eyebrow">Contact</p>
+   <h2 class="big">Contact</h2>
+   <p class="contact-lead">Une question, une idée de partenariat ou l’envie d’en savoir plus sur ABC ? Écrivez-nous directement ou retrouvez-nous sur les réseaux.</p>
+  </div>
+  <div class="card contact-card">
+   <dl>
+    <dt>Email</dt>
+    <dd class="email-row"><a href="mailto:edhecabc.partenariat@gmail.com">edhecabc.partenariat@gmail.com</a> <button class="inline-copy" id="copyMail" type="button">Copier</button></dd>
+    <dd><a class="btn solid email-cta" href="mailto:edhecabc.partenariat@gmail.com">Écrire un email</a></dd>
+    <dt>Adresse</dt><dd>24 Av. Gustave Delory, 59100 Roubaix</dd>
+    <dt>Retrouvez-nous aussi sur les réseaux</dt>
+    <dd><div class="socials"><a class="btn" href="https://www.instagram.com/edhec.abc" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn" href="https://www.tiktok.com/@edhec.abc" target="_blank" rel="noopener noreferrer">TikTok</a><a class="btn" href="https://www.facebook.com/edhec.abc/" target="_blank" rel="noopener noreferrer">Facebook</a><a class="btn" href="https://www.linkedin.com/company/18304229/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></dd>
+   </dl>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <img src="assets/logo-abc.png" alt="Logo ABC">
+ <div class="t">Asian Business &amp; Culture</div>
+ <div class="s">EDHEC Business School · 10<sup>e</sup> génération</div>
+</footer>
+
+<a class="btn solid" id="float" href="https://forms.gle/NBf1yPQsdf7txBQq8">Register your team</a>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+ <button class="lb-btn lb-x" id="lbx" aria-label="Fermer">×</button>
+ <button class="lb-btn lb-prev" id="lbp" aria-label="Photo précédente">‹</button>
+ <img id="lbi" alt=""><p id="lbc"></p>
+ <button class="lb-btn lb-next" id="lbn" aria-label="Photo suivante">›</button>
+</div>
+
+<script src="js/i18n.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
