@@ -56,7 +56,16 @@ var pairs=[
  ['Get noticed by experienced professionals.','Faites-vous remarquer par des professionnels expérimentés.'],['Present your work to a jury of academics and professionals, and get feedback that sharpens how you think and present.','Présentez votre travail à un jury d’universitaires et de professionnels, et recevez des retours pour affiner votre réflexion et votre présentation.'],['Build your network across two continents.','Développez votre réseau sur deux continents.'],['Meet ambitious students from EDHEC and partner universities in Europe and Asia.','Rencontrez des étudiants ambitieux de l’EDHEC et d’universités partenaires en Europe et en Asie.'],
  ['Questions? Contact us at','Une question ? Contactez-nous à'],['or follow us on Instagram','ou suivez-nous sur Instagram'],
  ['Partenariats','Partnerships'],['Devenez partenaire d’ABC','Become an ABC partner'],['Entreprises françaises ou asiatiques : associez votre nom à une association qui fait le lien entre l’Asie et la communauté EDHEC, et rencontrez les étudiants qui s’y intéressent.','French and Asian companies: connect your name with an association that brings Asia and the EDHEC community together, and meet the students who share this interest.'],['Nous écrire','Write to us'],
- ['Une question, une idée de partenariat ou l’envie d’en savoir plus sur ABC ? Écrivez-nous directement ou retrouvez-nous sur les réseaux.','Have a question, a partnership idea or want to learn more about ABC? Write to us directly or find us on social media.'],['Copier','Copy'],['Écrire un email','Send an email'],['Adresse','Address'],['Retrouvez-nous aussi sur les réseaux','Find us on social media'],['Photo agrandie','Enlarged photo'],['Fermer','Close'],['Photo précédente','Previous photo'],['Photo suivante','Next photo']
+ ['Une question, une idée de partenariat ou l’envie d’en savoir plus sur ABC ? Écrivez-nous directement ou retrouvez-nous sur les réseaux.','Have a question, a partnership idea or want to learn more about ABC? Write to us directly or find us on social media.'],['Copier','Copy'],['Écrire un email','Send an email'],['Adresse','Address'],['Retrouvez-nous aussi sur les réseaux','Find us on social media'],['Photo agrandie','Enlarged photo'],['Fermer','Close'],['Photo précédente','Previous photo'],['Photo suivante','Next photo'],
+ ['1st & 2nd year Bachelor · 1st year PGE','Bachelor 1re et 2e année · PGE 1re année',true],
+ ['Case released in November · submissions close on 31 December 2026','Cas publié en novembre · clôture des dossiers le 31 décembre 2026',true],
+ ['Team registration opens and the case is released in November 2026. Round 1 submissions close on 31 December 2026.','Les inscriptions et le cas seront ouverts en novembre 2026. Les dossiers du premier tour devront être remis au plus tard le 31 décembre 2026.',true],
+ ['31 December 2026','31 décembre 2026',true],
+ ['Finalist teams announced on 30 January 2027. Round 1 submissions close on 31 December 2026.','Annonce des équipes finalistes le 30 janvier 2027. Les dossiers du premier tour doivent être remis au plus tard le 31 décembre 2026.',true],
+ ['The competition is open to 1st and 2nd year Bachelor students and 1st year PGE students from EDHEC, as well as eligible students from other universities in Europe and Asia, in teams of 3-5 people. No prior finance experience is required, only curiosity and the will to learn. Check where you stand.','Le concours est ouvert aux étudiants de 1re et 2e année de Bachelor et de 1re année du PGE à l’EDHEC, ainsi qu’aux étudiants éligibles d’autres universités en Europe et en Asie, en équipes de 3 à 5 personnes. Aucune expérience préalable en finance n’est requise : seulement de la curiosité et l’envie d’apprendre. Vérifiez votre éligibilité.',true],
+ ['PGE, 1st year','PGE, 1re année',true],
+ ['Open to 1st and 2nd year Bachelor students and 1st year PGE students','Ouvert aux étudiants de 1re et 2e année de Bachelor et de 1re année du PGE',true],
+ ['The competition is open to 1st and 2nd year Bachelor students and 1st year PGE students from EDHEC, as well as eligible students from other universities in Europe and Asia. Questions? abc@edhec.com.','Le concours est ouvert aux étudiants de 1re et 2e année de Bachelor et de 1re année du PGE à l’EDHEC, ainsi qu’aux étudiants éligibles d’autres universités en Europe et en Asie. Une question ? abc@edhec.com.',true]
 ];
 
 var lang=(new URLSearchParams(location.search).get('lang')||localStorage.getItem('abc-language')||'fr').toLowerCase()==='en'?'en':'fr';
@@ -64,7 +73,7 @@ var lookup={};
 var englishSource=false;
 pairs.forEach(function(pair){
  if(pair[0]==='Think like an Investment Banker or a Strategy Consultant. Perform financial analysis. Advise a global company. Defend your strategy in front of a jury.')englishSource=true;
- var entry=englishSource?{fr:pair[1],en:pair[0]}:{fr:pair[0],en:pair[1]};
+ var entry=(pair[2]||englishSource)?{fr:pair[1],en:pair[0]}:{fr:pair[0],en:pair[1]};
  lookup[pair[0]]=entry;lookup[pair[1]]=entry;
  if(pair[0]==='or follow us on Instagram')englishSource=false;
 });

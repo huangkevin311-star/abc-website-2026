@@ -50,12 +50,6 @@ lb.addEventListener('click',function(event){if(event.target===lb)closeLightbox()
 document.addEventListener('keydown',function(event){if(!lb.classList.contains('open'))return;if(event.key==='Escape')closeLightbox();if(event.key==='ArrowLeft')showPhoto(photoIndex-1);if(event.key==='ArrowRight')showPhoto(photoIndex+1)});
 
 /* Étapes du concours */
-var TOOLS=[
- [T('Comparable companies'),T('Value a company by comparing the trading multiples of similar listed companies.')],
- [T('Operating model'),T('Forecast revenue, costs and cash flows to see how the business performs year by year.')],
- ['DCF',T('Discount forecast cash flows back to today to estimate what the business is worth now.')],
- [T('Precedent transactions'),T('Value a company from the prices paid in comparable past deals.')]
-];
 var stagePanel=$('#sp'),stageButtons=$$('.stage-tab');
 function element(tag,className,text){var item=document.createElement(tag);if(className)item.className=className;if(text)item.textContent=text;return item}
 function selectStage(index){
@@ -63,10 +57,8 @@ function selectStage(index){
  if(index===0){
   var stageOne=element('div');stageOne.appendChild(element('h4','',T('Stage 1 · Build a full valuation-backed recommendation')));
   stageOne.appendChild(element('p','',T("You'll build a full valuation-backed recommendation, using comparable companies analysis, an operating model, a DCF and precedent transactions. These are the skills tested in almost every finance interview, so the competition is also a first rehearsal for internship and job applications.")));
-  stageOne.appendChild(element('p','',T('Team registration opens and the case is released in November 2026. Round 1 submissions close in December 2026.')));
-  var toolList=element('div','tools'),definition=element('p','tool-def',TOOLS[0][1]);
-  TOOLS.forEach(function(tool,toolIndex){var button=element('button','tool',tool[0]);button.type='button';button.setAttribute('aria-pressed',toolIndex===0);button.addEventListener('click',function(){$$('.tool',toolList).forEach(function(other){other.setAttribute('aria-pressed','false')});button.setAttribute('aria-pressed','true');definition.textContent=tool[1]});toolList.appendChild(button)});
-  definition.setAttribute('aria-live','polite');toolList.appendChild(definition);var columns=element('div','cols');columns.appendChild(stageOne);columns.appendChild(toolList);stagePanel.appendChild(columns);
+  stageOne.appendChild(element('p','',T('Team registration opens and the case is released in November 2026. Round 1 submissions close on 31 December 2026.')));
+  stagePanel.appendChild(stageOne);
  }else{
   var stageTwo=element('div');stageTwo.appendChild(element('h4','',T('Stage 2 · Defend your strategy in front of a jury')));stageTwo.appendChild(element('p','',T('Finalist teams are announced on 30 January 2027. The live final takes place in Lille from 8 to 12 February 2027, and winners are announced there.')));stageTwo.appendChild(element('p','',T('Present your work to a jury of academics and professionals, and get feedback that sharpens how you think and present.')));
   var takeaway=element('div');takeaway.appendChild(element('h4','',T('What you take away')));takeaway.appendChild(element('p','',T('An official certificate from EDHEC Business School, a story you can tell in interviews, and a network of ambitious students from EDHEC and partner universities in Europe and Asia.')));
@@ -81,7 +73,7 @@ function timelinePosition(now){var dates=[start,parseDate('2026-12-31T23:59:00+0
 function updateCountdown(){
  var now=Date.now(),position=timelinePosition(now);$('#today').style.left=position+'%';$('#fill').style.width=position+'%';$$('.node').forEach(function(node,index){node.classList.toggle('done',position>=index/3*100-.01)});
  var target,title,eye=T('Next milestone');
- if(now<jury){target=jury;title=T('Finalist teams announced on 30 January 2027. Round 1 submissions close in December 2026.')}
+ if(now<jury){target=jury;title=T('Finalist teams announced on 30 January 2027. Round 1 submissions close on 31 December 2026.')}
  else if(now<finalStart){target=finalStart;title=T('Live final in Lille starts on 8 February 2027')}
  else if(now<finalEnd){target=finalEnd;title=T('The live final is on in Lille. Winners announced.');eye=T('Live now')}
  else{target=now;title=T('Thank you to every team that took part.');eye=T('Completed')}
@@ -94,7 +86,7 @@ updateCountdown();setInterval(updateCountdown,1000);
 var year='b12',team='4';
 function updateVerdict(){
  var verdict=$('#verdict'),tag,className,title,copy;
- if(year!=='b12'){className='no';tag=T('Not eligible');title=T('Open to 1st and 2nd year Bachelor students');copy=T('The competition is open to 1st and 2nd year Bachelor students from EDHEC and from other universities in Europe and Asia. Questions? abc@edhec.com.')}
+ if(year!=='b12'&&year!=='pge1'){className='no';tag=T('Not eligible');title=T('Open to 1st and 2nd year Bachelor students and 1st year PGE students');copy=T('The competition is open to 1st and 2nd year Bachelor students and 1st year PGE students from EDHEC, as well as eligible students from other universities in Europe and Asia. Questions? abc@edhec.com.')}
  else if(team==='6'){className='mid';tag=T('Almost');title=T('Teams are 3 to 5 people');copy=T('Split into two teams, or pick up to five members. Teams are formed of 3-5 people.')}
  else if(team==='1'){className='ok';tag=T('You can register');title=T('Register on your own');copy=T("No team yet? Register on your own and we'll randomly match you with other solo participants to form a team, or you could follow us up once you find more participants. No prior finance experience is required.")}
  else if(team==='2'){className='mid';tag=T('One more to go');title=T('You need 3 to 5 people');copy=T("Teams are formed of 3-5 people. Add a teammate, or register on your own and we'll randomly match you with other solo participants.")}
