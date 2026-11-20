@@ -57,7 +57,7 @@ function selectStage(index){
  if(index===0){
   var stageOne=element('div');stageOne.appendChild(element('h4','',T('Stage 1 · Build a full valuation-backed recommendation')));
   stageOne.appendChild(element('p','',T("You'll build a full valuation-backed recommendation, using comparable companies analysis, an operating model, a DCF and precedent transactions. These are the skills tested in almost every finance interview, so the competition is also a first rehearsal for internship and job applications.")));
-  stageOne.appendChild(element('p','',T('Team registration opens and the case is released in November 2026. Round 1 submissions close on 31 December 2026.')));
+  stageOne.appendChild(element('p','',T('Team registration opens and the case is released in November 2026. Round 1 submissions close on 8 January 2027.')));
   stagePanel.appendChild(stageOne);
  }else{
   var stageTwo=element('div');stageTwo.appendChild(element('h4','',T('Stage 2 · Defend your strategy in front of a jury')));stageTwo.appendChild(element('p','',T('Finalist teams are announced on 30 January 2027. The live final takes place in Lille from 8 to 12 February 2027, and winners are announced there.')));stageTwo.appendChild(element('p','',T('Present your work to a jury of academics and professionals, and get feedback that sharpens how you think and present.')));
@@ -68,12 +68,13 @@ function selectStage(index){
 stageButtons.forEach(function(button,index){button.addEventListener('click',function(){selectStage(index)});button.addEventListener('keydown',function(event){if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();var next=index?0:1;selectStage(next);stageButtons[next].focus()}})});selectStage(0);
 
 /* Frise et compte à rebours */
-var parseDate=function(value){return Date.parse(value)},start=parseDate('2026-11-11T00:00:00+01:00'),jury=parseDate('2027-01-30T00:00:00+01:00'),finalStart=parseDate('2027-02-08T00:00:00+01:00'),finalEnd=parseDate('2027-02-13T00:00:00+01:00');
-function timelinePosition(now){var dates=[start,parseDate('2026-12-31T23:59:00+01:00'),jury,finalEnd];if(now<=dates[0])return 0;if(now>=dates[3])return 100;for(var index=0;index<3;index++){if(now<dates[index+1])return (index+(now-dates[index])/(dates[index+1]-dates[index]))/3*100}return 100}
+var parseDate=function(value){return Date.parse(value)},start=parseDate('2026-11-11T00:00:00+01:00'),submission=parseDate('2027-01-08T23:59:00+01:00'),jury=parseDate('2027-01-30T00:00:00+01:00'),finalStart=parseDate('2027-02-08T00:00:00+01:00'),finalEnd=parseDate('2027-02-13T00:00:00+01:00');
+function timelinePosition(now){var dates=[start,submission,jury,finalEnd];if(now<=dates[0])return 0;if(now>=dates[3])return 100;for(var index=0;index<3;index++){if(now<dates[index+1])return (index+(now-dates[index])/(dates[index+1]-dates[index]))/3*100}return 100}
 function updateCountdown(){
  var now=Date.now(),position=timelinePosition(now);$('#today').style.left=position+'%';$('#fill').style.width=position+'%';$$('.node').forEach(function(node,index){node.classList.toggle('done',position>=index/3*100-.01)});
  var target,title,eye=T('Next milestone');
- if(now<jury){target=jury;title=T('Finalist teams announced on 30 January 2027. Round 1 submissions close on 31 December 2026.')}
+ if(now<submission){target=submission;title=T('Round 1 submissions close on 8 January 2027')}
+ else if(now<jury){target=jury;title=T('Finalist teams announced on 30 January 2027')}
  else if(now<finalStart){target=finalStart;title=T('Live final in Lille starts on 8 February 2027')}
  else if(now<finalEnd){target=finalEnd;title=T('The live final is on in Lille. Winners announced.');eye=T('Live now')}
  else{target=now;title=T('Thank you to every team that took part.');eye=T('Completed')}
